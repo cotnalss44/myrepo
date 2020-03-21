@@ -1,0 +1,34 @@
+git init
+git status
+git add
+git commit
+git log
+git -am
+git branch
+git branch "branch name" //create branch
+git checkout "branch name" //swtich branch
+//file and version is differernt based on branch
+<<<<<<< HEAD
+=======
+git branch -d
+git checkout -b "new branch name" //create new branch and commit and copy
+git log "branchname1".. "branchname2" //check difference
+git log -p "branchname1".."branchname2"
+git diff "branchname1".."branchname2" //check difference in coding
+
+로그에 모든 브랜치를 표시하고, 그래프로 표현하고, 브랜치 명을 표시하고, 한줄로 표시할 때 
+git log --branches --graph --decorate --oneline
+
+stree
+use GUI version of sourcetree
+alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
+
+//how to merge branches
+first checkout to the branch which you want to update (to be merged)
+and merge
+e.g. When update 1stbch to master
+git checkout 1stbch
+git merge master
+ 
+
+test1
