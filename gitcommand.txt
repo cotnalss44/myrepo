@@ -30,5 +30,26 @@ e.g. When update 1stbch to master
 git checkout 1stbch
 git merge master
  
+echo "# myrepo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:cotnalss44/myrepo.git
+git push -u origin master
+                
 
-test1
+git remote add origin //git@github.com:cotnalss44/myrepo.git
+git push -u origin master
+Origin is the name of the repository. You can choose whatever you want.
+
+https://github.com/cotnalss44/myrepo.git
+Git remote add origin https://github.com/cotnalss44/myrepo.git
+
+Git remote
+Git remote -v
+Git remote —help
+Git remote remove origin 
+Git push -u origin master // 현재 init된 디렉토리를 origin으로 푸쉬하는데 마스터 브랜치로 날린다.
+-u, master는 한번만 쓰면 됨. 다음부터는 git push만 쓰면됨.
+
+Git commit —amend //버전 이름 바꾸기
