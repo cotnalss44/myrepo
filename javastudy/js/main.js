@@ -93,32 +93,33 @@
 
 
 // Values and properties
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: '30',
-    hobbies: ['music', 'sports', 'movies'],
-    address: {
-        street: '50 main st',
-        city: 'Boston',
-        state: 'MA'
-    }
-}
+// alert('hello');
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: '30',
+//     hobbies: ['music', 'sports', 'movies'],
+//     address: {
+//         street: '50 main ßst',
+//         city: 'Boston',
+//         state: 'MA'
+//     }
+// }
 
 // console.log(person);
 // console.log(person.firstName, person.lastName);
 // console.log(person.hobbies[1]);
 // console.log(person.address.city);
 
-// const { firstName, lastName} = person;
-// console.log(firstName);
+// // const { firstName, lastName} = person;
+// // console.log(firstName);
 
-// const { firstName, lastName, age, hobbies, address: {street, city, state}} = person;
-// console.log(hobbies[0]);
-// console.log(city);
+// // const { firstName, lastName, age, hobbies, address: {street, city, state}} = person;
+// // console.log(hobbies[0]);
+// // console.log(city);
 
-// person.email = 'john@gmail.com'; //adding property
-// console.log(person);
+// // person.email = 'john@gmail.com'; //adding property
+// // console.log(person);
 
 
 // Values in Array and object
@@ -146,6 +147,3 @@ console.log(todos[2].isCompleted);
 
 const todoJson = JSON.stringify(todos);
 console.log(todoJson);
-
-
-test from macbook
