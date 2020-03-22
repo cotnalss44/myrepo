@@ -1,4 +1,3 @@
-
 //console.function
 //https://developer.mozilla.org/en-US/docs/Web/API/console
 // console.log('hello world');
@@ -124,10 +123,9 @@ const person = {
 
 // Values in Array and object
 
-const todos = [
-    {
+const todos = [{
         id: 1,
-        text:'Take out trash',
+        text: 'Take out trash',
         isCompleted: true
     },
     {
@@ -148,3 +146,6 @@ console.log(todos[2].isCompleted);
 
 const todoJson = JSON.stringify(todos);
 console.log(todoJson);
+
+
+test from macbook
