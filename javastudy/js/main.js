@@ -141,9 +141,67 @@ const todos = [{
     }
 ]
 
-console.log(todos);
-console.log(todos[1].text);
-console.log(todos[2].isCompleted);
+// for (let i=0; i < todos.length;){
+//     console.log(todos[i].text);
+//     i++
+// }
 
-const todoJson = JSON.stringify(todos);
-console.log(todoJson);
+// for (let todo of todos) {
+//     console.log(todo);
+// }
+
+// for (let todo of todos) {
+//     console.log(todo.text);
+// }
+
+
+// console.log(todos);
+// console.log(todos[1].text);
+// console.log(todos[2].isCompleted);
+
+
+// //convert to json format
+// const todoJson = JSON.stringify(todos);
+// console.log(todoJson);
+
+//for
+
+// for (let i=0; i<10; i=i+1){
+// console.log(i);
+// }
+
+// for (let i=0; i<=10; i++) {
+//     console.log(i);
+// }
+
+// for (let i=0; i<=10; i++){
+//     console.log(`For loop ${i}`);
+// }
+
+// //while loop
+
+// let i = 0;
+// while (i<10) {
+// console.log(`While loop ${i}`);
+// i++;
+// }
+
+//forEach, map, filter (return in array)
+const todoText = todos.map(function(todo){
+return todo.text;
+});
+console.log(todoText);
+
+
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+});
+console.log(todoCompleted);
+
+
+const todoCompleted2 = todos.filter(function(todo){
+    return todo.isCompleted2 === true;
+}).map(function(todo){
+    return todo.text;
+});
+console.log(todoCompleted2);
