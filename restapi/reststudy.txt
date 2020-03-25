@@ -75,3 +75,43 @@ Query Parameters
 
 18. create folder routes inder src folder
 19. create file person.js
+20. now you can use the api to use in insomnia or postman
+
+21. Create dependency called nodemon
+npm i nodemon --save //this --save make the installation as dependency
+//but because we are using a latest node, we dont need to install
+//but instead, use -D to make it a dev installation.
+npm i nodemon -D
+
+22. making monitoring script
+"start-watch": "nodemon src/index.js", //add to package.json, This will specify this file to watch
+npm run start-watch // this will start monitoring
+
+23. add Parameters in script
+router.get('person/:name', (req, res) => {
+    res.send(`You have requested a person ${req.params.name}`)
+})
+
+24. add queryString
+//single query
+//localhost:3000/person?name=thomas
+router.get('person', (req, res)=> {
+    if(req.query.name){
+        res.send(`You have requested person ${req.query.name}`)
+    }
+    else
+    {
+        res.send(`You have requested person`)
+    }
+})
+
+//double query
+//localhost:3000/person?name=thomas&age=20
+router.get('person', (req, res)=> {
+    if(req.query.name){
+    res.send(`You have requested person ${req.query.name} ${req.query.age`)
+    }
+    else(
+        res.send(`You have requeted person`)
+    )
+})
