@@ -1,0 +1,117 @@
+http method
+
+get:retrieve data
+post:submit data
+put:update a specified resource
+delete:delete a specified resource
+
+End points
+The Url/Uri where api/service can be accessed by a client application
+
+Authentication
+Some API's require a authentication to use their service. This could be free or paid.
+
+
+Rest-api-workshop
+1. create the default folder (e.g. rest-api-workshop)
+2. cd rest-api-workshop
+3. npm init -y
+suchae@Sus-iMac rest-api-workshop % npm init -y
+Wrote to /Users/suchae/Documents/github.imac/myrepo/restapi/rest-api-workshop/package.json:
+{
+  "name": "rest-api-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+And this will create the package.json file automatically
+
+4. create src folder under the default folder
+5. and create index.js file (console.log('hello world') under the src folder
+6. test
+   node src/index.js
+
+7. add helpful command in package.json such as "start": "node src/index.js", in script
+"scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+8. And npm start
+
+9. Express (NPM package, lightweighted webserver)
+ - install dependency
+ - reference the express library
+
+10. npm install express - this will save in package.json
+  "dependencies": {
+    "express": "^4.17.1"
+
+11. switch to index.js
+12. set the library : let express = require ('express)
+13. create application : let app = express()
+14. add content
+15. create public folder under the default folder to add the content // Server Static Content
+public/index.html
+16. make link from index.js to index.html
+app.use(express.static('public'))
+const PORT =  process.env.PORT || 3000    // this will use specified port if not use 3000
+app.list(PORT, () => console.info(`Server has started on ${PORT}`))
+
+Once you start the npm // npm start
+the message will appear and it can be seen on localhost/3000 also.
+
+17. Route (Mount to Express)
+Get request
+Request Parameters
+Query Parameters
+
+18. create folder routes inder src folder
+19. create file person.js
+20. now you can use the api to use in insomnia or postman
+
+21. Create dependency called nodemon
+npm i nodemon --save //this --save make the installation as dependency
+//but because we are using a latest node, we dont need to install
+//but instead, use -D to make it a dev installation.
+npm i nodemon -D
+
+22. making monitoring script
+"start-watch": "nodemon src/index.js", //add to package.json, This will specify this file to watch
+npm run start-watch // this will start monitoring
+
+23. add Parameters in script
+router.get('person/:name', (req, res) => {
+    res.send(`You have requested a person ${req.params.name}`)
+})
+
+24. add queryString
+//single query
+//localhost:3000/person?name=thomas
+router.get('person', (req, res)=> {
+    if(req.query.name){
+        res.send(`You have requested person ${req.query.name}`)
+    }
+    else
+    {
+        res.send(`You have requested person`)
+    }
+})
+
+//double query
+//localhost:3000/person?name=thomas&age=20
+router.get('person', (req, res)=> {
+    if(req.query.name){
+    res.send(`You have requested person ${req.query.name} ${req.query.age`)
+    }
+    else(
+        res.send(`You have requeted person`)
+    )
+})
