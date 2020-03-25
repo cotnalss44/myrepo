@@ -147,5 +147,3 @@ console.log(todos[2].isCompleted);
 const todoJson = JSON.stringify(todos);
 console.log(todoJson);
 
-
-test from macbook
