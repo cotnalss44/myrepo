@@ -115,3 +115,9 @@ router.get('person', (req, res)=> {
         res.send(`You have requeted person`)
     )
 })
+
+
+
+25. Middleware : functions that execute serially
+- to show the other data such as date, requested url
+e.g Thu Mar 26 2020 14:48:21 GMT+0700 (+07) => /person?name=thomas
